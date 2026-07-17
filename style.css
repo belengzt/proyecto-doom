@@ -1,0 +1,337 @@
+/* PALETA DE COLORES ESET - DOOM */
+:root {
+    --color-maroon: #7a1515;       /* Rojo borravino oscuro */
+    --color-yellow: #f2f0b3;       /* Amarillo cálido / crema técnico */
+    --color-emerald: #00674F;      /* Verde militar esmeralda */
+    --color-red-vivid: #e74c3c;    /* Rojo vivo para detalles */
+    --font-main: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-maroon);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding-top: 75px; /* Evita que el menú fijo pise el contenido */
+}
+
+/* CLASES DE UTILIDAD */
+.bg-maroon { background-color: var(--color-maroon); }
+.bg-emerald { background-color: var(--color-emerald); }
+.text-yellow { color: var(--color-yellow); }
+.font-mono { font-family: var(--font-mono); }
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.container-narrow { max-width: 900px; }
+.center-text { text-align: center; }
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-5 { margin-top: 60px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+.mb-4 { margin-bottom: 40px; }
+.mb-5 { margin-bottom: 60px; }
+.block { display: block; }
+.border-top { border-top: 1px solid rgba(242, 240, 179, 0.2); }
+
+/* ESTILOS DE ETIQUETAS TÉCNICAS */
+.tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-yellow);
+    opacity: 0.8;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.step-num {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--color-yellow);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* TIPOGRAFÍAS */
+.medium-title { font-size: 1.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.5px; }
+.small-text { font-size: 0.85rem; opacity: 0.9; }
+
+/* MENÚ DE NAVEGACIÓN RESPONSIVE */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-maroon);
+    border-bottom: 1px solid rgba(242, 240, 179, 0.15);
+}
+.nav-container {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-yellow);
+}
+.brand-title { font-weight: 800; font-size: 1.4rem; letter-spacing: 1px; line-height: 1; }
+.brand-sub { font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.7; margin-top: 3px; }
+
+/* Menú colapsado por defecto en móvil */
+.nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-emerald);
+    padding: 20px;
+    text-align: center;
+    gap: 15px;
+    border-bottom: 2px solid var(--color-yellow);
+}
+.nav-links.active { display: flex; } /* Clase de JS */
+.nav-links a { color: var(--color-yellow); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.nav-toggle { cursor: pointer; color: var(--color-yellow); display: block; }
+
+/* PORTADA / HERO (MÓVIL) */
+.section-hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(rgba(50, 30, 30, 0.85), rgba(0, 0, 0, 0.9)), 
+                url('./fotos/doom-art.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+}
+.hero-content { position: relative; padding: 40px 0; }
+.corner-accent {
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--color-red-vivid);
+    border-left: 2px solid var(--color-red-vivid);
+    margin-bottom: 15px;
+}
+.hero-meta { font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 15px; }
+.hero-title { font-size: 3.2rem; font-weight: 800; line-height: 0.95; letter-spacing: -1px; margin-bottom: 20px; }
+.highlight-red { color: var(--color-red-vivid); }
+.hero-subtitle { font-size: 1.1rem; color: var(--color-yellow); font-weight: 600; margin-bottom: 15px; opacity: 0.9; }
+.hero-desc { font-size: 0.95rem; margin-bottom: 30px; opacity: 0.85; }
+
+.hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-yellow);
+    color: var(--color-maroon);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-align: center;
+    border: 1px solid var(--color-yellow);
+}
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-yellow);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-align: center;
+    border: 1px solid var(--color-yellow);
+}
+
+/* SECCIÓN 2: RESUMEN (Grid colapsada) */
+.section-resumen { border-top: 2px solid var(--color-yellow); }
+.grid-2-columns { display: grid; grid-template-columns: 1fr; gap: 40px; }
+.section-subtitle { font-size: 1.6rem; font-weight: 800; }
+.section-body { font-size: 1.05rem; opacity: 0.9; }
+
+/* SECCIÓN 3: SPLIT (Fondo Esmeralda + Imagen) */
+.split-section { display: flex; flex-direction: column; }
+.split-text { padding: 60px 5%; display: flex; flex-direction: column; justify-content: center; }
+.split-image img { width: 100%; min-height: 300px; object-fit: cover; display: block; }
+
+/* SECCIÓN 4: DESARROLLO */
+.section-desarrollo { border-top: 1px solid rgba(242, 240, 179, 0.2); }
+
+/* TARJETA PRESENTACIÓN BITÁCORA */
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(242, 240, 179, 0.15);
+}
+.quote-image { width: 100%; border-radius: 8px; object-fit: cover; max-height: 250px; }
+.quote-title { font-size: 1.5rem; font-weight: 800; line-height: 1.2; }
+.quote-desc { font-size: 1rem; opacity: 0.9; font-style: italic; }
+
+/* CARRUSEL OPTIMIZADO */
+.carousel-section { position: relative; max-width: 800px; margin: 0 auto; }
+.carousel-title { font-size: 1.1rem; color: var(--color-yellow); font-family: var(--font-mono); }
+.carousel-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(242, 240, 179, 0.3);
+}
+.carousel-track-container { overflow: hidden; width: 100%; }
+.carousel-track {
+    display: flex;
+    list-style: none;
+    transition: transform 0.4s ease-in-out;
+}
+.carousel-slide { min-width: 100%; position: relative; }
+.carousel-slide img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Obliga a que todas las fotos tengan la misma relación de aspecto */
+    object-fit: contain;
+    background-color: 0,0,0,0.8;
+    display: block;
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--color-yellow);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    pointer-events: none;
+    white-space: nowrap;
+    border: 1px solid rgba(242, 240, 179, 0.3);
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(242, 240, 179, 0.9);
+    color: var(--color-maroon);
+    border: none;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+.carousel-indicator {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-yellow);
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* GRILLA PASOS / 4 COLUMNAS (Móvil) */
+.grid-4-columns { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(242, 240, 179, 0.1);
+}
+
+/* SECCIÓN CONCLUSIONES (Fondo Esmeralda) */
+.section-conclusiones { border-top: 2px solid var(--color-yellow); }
+
+/* CTA FINAL */
+.section-cta {
+    background: linear-gradient(rgba(122, 21, 21, 0.9), rgba(122, 21, 21, 0.95)), 
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000') no-repeat center/cover;
+    padding: 80px 20px;
+}
+.giant-title { font-size: 2.3rem; font-weight: 800; line-height: 1.05; letter-spacing: -1px; }
+
+/* FOOTER */
+.section-footer { border-top: 2px solid var(--color-yellow); }
+.footer-logo { font-size: 2.5rem; font-weight: 800; opacity: 0.6; letter-spacing: 2px; }
+.footer-intro { font-size: 1.05rem; opacity: 0.9; }
+.footer-links-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.footer-column { display: flex; flex-direction: column; gap: 10px; }
+.footer-column a, .footer-legal span { color: var(--color-yellow); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+.footer-column a:hover { text-decoration: underline; }
+.footer-legal { display: flex; flex-direction: column; gap: 5px; padding-top: 30px; border-top: 1px solid rgba(242, 240, 179, 0.2); }
+
+
+/* =======================================================
+   MEDIA QUERIES (Excelente visualización en Computadora)
+   ======================================================= */
+@media (min-width: 768px) {
+    .hero-title { font-size: 5.5rem; }
+    .hero-subtitle { font-size: 1.4rem; }
+    .medium-title { font-size: 2.4rem; }
+    .giant-title { font-size: 4rem; }
+    .hero-buttons { flex-direction: row; }
+
+    /* Menú adaptado para computadoras */
+    .nav-toggle { display: none; }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        width: auto;
+        padding: 0;
+        gap: 30px;
+        border-bottom: none;
+    }
+    .nav-container { justify-content: space-between; }
+
+    /* Grillas y Secciones */
+    .grid-2-columns { grid-template-columns: 1fr 1fr; gap: 50px; }
+    
+    .split-section { flex-direction: row; }
+    .split-text { width: 50%; padding: 80px 8%; }
+    .split-image { width: 50%; }
+
+    .quote-card { flex-direction: row; align-items: center; gap: 40px; }
+    .quote-image { width: 35%; max-height: 300px; }
+    .quote-content { width: 65%; }
+
+    .grid-4-columns { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    
+    .footer-links-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+}
+
+@media (min-width: 1024px) {
+    .grid-4-columns { grid-template-columns: repeat(4, 1fr); }
+    .section-cta { background-attachment: fixed; } /* Parallax sutil */
+}

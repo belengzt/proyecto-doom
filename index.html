@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Puede Correr DOOM? - Feria de Ciencias</title>
+    <!-- Google Fonts: Inter para lectura limpia y Fira Code para la data técnica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN RESPONSIVE -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <span class="brand-title">ESET</span>
+                <span class="brand-sub">Feria de Ciencias 2026</span>
+            </div>
+            
+            <!-- Botón hamburguesa para celulares -->
+            <div class="nav-toggle" id="mobile-menu-btn">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+
+            <!-- Enlaces de navegación -->
+            <div class="nav-links" id="nav-links">
+                <a href="#resumen">Resumen</a>
+                <a href="#desarrollo">Desarrollo</a>
+                <a href="#conclusiones">Conclusiones</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN 1: PORTADA / HERO -->
+        <section class="section-hero">
+            <div class="container hero-content">
+                <div class="corner-accent"></div>
+                <span class="hero-meta text-yellow">■ Feria De Ciencias 2026 ■</span>
+                <h1 class="hero-title text-yellow">¿Puede Correr<br><span class="highlight-red">DOOM?</span></h1>
+                <p class="hero-subtitle">Experimentación tecnológica aplicada a dispositivos no convencionales</p>
+                <p class="hero-desc text-yellow">
+                    Un proyecto de 4° y 6° año de la Escuela Técnica de Quilmes que explora los límites del hardware cotidiano a través de programación, robótica y electrónica — partiendo del icónico desafío técnico.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#desarrollo" class="btn-primary">Ver Bitácora</a>
+                    <a href="#resumen" class="btn-outline">Leer Proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: RESUMEN E INTRODUCCIÓN -->
+        <section id="resumen" class="section-resumen bg-maroon text-yellow">
+            <div class="container container-narrow">
+                <div class="grid-2-columns">
+                    <div class="info-block">
+                        <span class="tech-tag">// STATUS: COMPILADO</span>
+                        <h2 class="section-subtitle mb-2">1. Resumen</h2>
+                        <p class="section-body">
+                            El proyecto surge a partir del meme tecnológico que plantea ejecutar el videojuego DOOM en dispositivos electrónicos que originalmente no fueron diseñados para eso. Exploramos los límites del hardware cotidiano mediante programación, robótica y electrónica, analizando qué modificaciones son necesarias para lograrlo.
+                        </p>
+                    </div>
+                    <div class="info-block">
+                        <span class="tech-tag">// CONTENIDOS CURRICULARES</span>
+                        <h2 class="section-subtitle mb-2">2. Introducción</h2>
+                        <p class="section-body">
+                            La situación problemática consiste en determinar hasta qué punto dispositivos no convencionales pueden ejecutar programas complejos. El proyecto articula alumnos de 4° año de Programación y 6° año en el desarrollo del entorno web interactivo para registrar avances y difundir las experiencias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: HIPÓTESIS (Sección Split) -->
+        <section class="split-section">
+            <div class="split-text bg-emerald text-yellow">
+                <span class="tech-tag">[ HIPÓTESIS DE TRABAJO ]</span>
+                <h2 class="medium-title">
+                    "¿Pueden dispositivos cotidianos ejecutar software complejo? Adaptamos hardware no convencional mediante optimización de recursos para demostrar que su capacidad técnica supera su propósito original."
+    </p>
+                </h2>
+            </div>
+            <div class="split-image">
+                <img src="./fotos/retrooo.jpeg" alt="Hardware de computadoras antiguas">
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: DESARROLLO (La Bitácora con Carrusel de 6 fotos) -->
+        <section id="desarrollo" class="section-desarrollo bg-maroon text-yellow">
+            <div class="container">
+                <span class="tech-tag">// ARCHIVO DE INGENIERÍA: BITÁCORA</span>
+                <h2 class="medium-title mb-4">3. Desarrollo, Materiales y Métodos</h2>
+                
+                <!-- Registro de avances reales del proyecto -->
+                <div class="quote-card mb-5">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Placa de circuito" class="quote-image">
+                    <div class="quote-content">
+                        <span class="tech-tag">ETAPA DE COMPILACIÓN</span>
+                        <h3 class="quote-title mt-1">"Superar las limitaciones físicas de procesamiento nos obligó a optimizar cada bloque de código."</h3>
+                        <p class="quote-desc mt-2">Enfrentarse a sistemas con apenas unos kilobytes de memoria nos dio una perspectiva completamente nueva sobre el diseño de software eficiente y el reciclaje tecnológico.</p>
+                        <span class="small-text mt-2 block">ESET — Quilmes</span>
+                    </div>
+                </div>
+
+                <!-- CARRUSEL INTERACTIVO (6 imágenes reales adaptadas) -->
+                <div class="carousel-section mb-5">
+                    <h3 class="carousel-title mb-3 center-text">[ Registro del Proceso ]</h3>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
+                        
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track" id="track">
+                                <!-- Imagen 1 -->
+                                <li class="carousel-slide current-slide">
+                                    <img src="./fotos/celular-doom.jpeg" alt="Investigación de Hardware">
+                                </li>
+                                <!-- Imagen 2 -->
+                                <li class="carousel-slide">
+                                    <img src="./fotos/celu2.jpeg" alt="Pruebas de Compilación">
+                                    
+                                </li>
+                                <!-- Imagen 3 -->
+                                <li class="carousel-slide">
+                                    <img src="./fotos/chico.jpeg" alt="Brazo Robótico">
+                                  
+                                </li>
+                                <!-- Imagen 4 -->
+                                <li class="carousel-slide">
+                                    <img src="./fotos/pcdoom2.jpeg" alt="Sensores y Robots">
+                                    
+                                </li>
+                                <!-- Imagen 5 -->
+                                <li class="carousel-slide">
+                                    <img src="./fotos/armando-pc.jpeg" alt="Desarrollo Web">
+                                    
+                                </li>
+                                <!-- Imagen 6 -->
+                                <li class="carousel-slide">
+                                    <img src="./fotos/pcdoom.jpeg" alt="Pruebas Finales">
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+                    </div>
+                
+                </div>
+
+                <!-- Pasos de Ingeniería (Estructura de 4 columnas) -->
+                <div class="features-header mt-5 mb-4">
+                    <span class="tech-tag">MÉTODOS APLICADOS</span>
+                    <h2 class="medium-title mt-1">Fases de desarrollo y experimentación técnica</h2>
+                </div>
+
+                <div class="grid-4-columns">
+                    <div class="grid-item">
+                        <span class="step-num">[PASO 01]</span>
+                        <h4 class="mt-1 mb-1">Investigación & Recolección</h4>
+                        <p class="small-text">Análisis técnico de sistemas embebidos y recolección de computadoras o componentes electrónicos reciclados. Uso de microcontroladores.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="step-num">[PASO 02]</span>
+                        <h4 class="mt-1 mb-1">Pruebas de Compatibilidad</h4>
+                        <p class="small-text">Solución a limitaciones severas de memoria RAM y procesamiento en controladores básicos mediante optimización y adaptación del software.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="step-num">[PASO 03]</span>
+                        <h4 class="mt-1 mb-1">Productos Tecnológicos</h4>
+                        <p class="small-text">Construcción física y programación de un brazo robótico automatizado y robots de fútbol equipados con sensores móviles.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="step-num">[PASO 04]</span>
+                        <h4 class="mt-1 mb-1">Resultados & Evaluación</h4>
+                        <p class="small-text">Se identificaron con éxito los límites del hardware. La optimización demostró que el hardware obsoleto rinde por encima de su diseño.</p>
+                    </div>
+                </div>
+            <!-- INICIO: DISPOSITIVOS ANALIZADOS -->
+<div class="dispositivos-section" style="margin-top: 50px;">
+   
+    <h2 class="medium-title mb-4">Dispositivos Analizados</h2>
+    <p class="mb-4" style="opacity: 0.9;">
+        DOOM (1993) requiere recursos mínimos de hardware. Partiendo de la premisa de que muchos objetos cotidianos (cajeros, impresoras, tostadoras inteligentes) poseen procesadores, memoria y pantallas, se evaluaron los siguientes teléfonos celulares bajo tres criterios clave: <strong>1)</strong> Poseer pantalla/display, <strong>2)</strong> Capacidad de procesar señales, y <strong>3)</strong> Disponibilidad física para investigación.
+    </p>
+
+    <!-- TARJETA 1: LG C195 (El elegido) -->
+    <div class="quote-card mb-4">
+        <!-- 👇 ACÁ CAMBIÁS LA FOTO POR LA DEL LG 👇 -->
+        <img src="./fotos/lg.jpg" alt="LG C195" class="quote-image">
+        <div class="quote-content">
+            <span class="tech-tag" >[ DISPOSITIVO SELECCIONADO ]</span>
+            <h3 class="quote-title mt-1">LG C195</h3>
+            <p class="quote-desc mt-2">Cumple con los tres requisitos fundamentales (pantalla, procesamiento y disponibilidad). Fue elegido como el hardware principal del proyecto porque compilar y ejecutar DOOM en su entorno nativo de Java representa un desafío de ingeniería mucho más rico e interesante.</p>
+            <ul style="list-style: none; padding: 0; margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-yellow); opacity: 0.8;">
+               
+            </ul>
+        </div>
+    </div>
+
+    <!-- TARJETA 2: Samsung J1 Core -->
+    <div class="quote-card mb-4">
+        <!-- 👇 ACÁ CAMBIÁS LA FOTO POR LA DEL SAMSUNG 👇 -->
+        <img src="./fotos/relojj.jpg" alt="Reloj Inteligente" class="quote-image">
+        <div class="quote-content">
+            <span class="tech-tag">[ DISPOSITIVO SELECCIONADO ]</span>
+            <h3 class="quote-title mt-1">Reloj Inteligente</h3>
+            <p class="quote-desc mt-2">Los relojes inteligentes actuales pueden ejecutar Doom. Doom tienebajos requisitos, su código es abierto, y está escrito en lenguaje C, lo quepermite adaptarlo fácilmente a casi cualquier procesador.</p>
+            <ul style="list-style: none; padding: 0; margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-yellow); opacity: 0.8;">
+            
+            </ul>
+        </div>
+    </div>
+
+    <!-- TARJETA 3: Sony Ericsson -->
+    <div class="quote-card mb-4">
+        <!-- 👇 ACÁ CAMBIÁS LA FOTO POR LA DEL SONY ERICSSON 👇 -->
+        <img src="./fotos/sonyy.jpg" alt="Sony Ericsson" class="quote-image">
+        <div class="quote-content">
+            <span class="tech-tag"style="color: var(--color-emerald);">[ ALTERNATIVA DESCARTADA ]</span>
+            <h3 class="quote-title mt-1">Sony Ericsson</h3>
+            <p class="quote-desc mt-2">El dispositivo cumple teóricamente con la capacidad de procesamiento y ejecución mediante versiones de Java (lo cual lo hacía un candidato muy interesante). Sin embargo, no superó el tercer criterio de evaluación: el equipo no disponía del dispositivo físico para realizar las pruebas y extraer información.</p>
+            <ul style="list-style: none; padding: 0; margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-yellow); opacity: 0.8;">
+             
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- FIN: DISPOSITIVOS ANALIZADOS -->
+</div>
+<!-- FIN: PRODUCTOS TECNOLÓGICOS -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: CONCLUSIONES (La data posta institucional de tu escuela) -->
+        <section id="conclusiones" class="section-conclusiones bg-emerald text-yellow">
+            <div class="container">
+                <span class="tech-tag">// CONCLUSIONES GENERALES</span>
+                <h2 class="medium-title mb-4">5. Conclusiones finales</h2>
+                
+                <div class="quote-card">
+                    <div class="quote-content" style="width: 100%;">
+                        <h3 class="quote-title">"El trabajo articulado fortalece las dinámicas colaborativas, vinculando contenidos curriculares con la cultura digital contemporánea."</h3>
+                        <p class="quote-desc mt-2">La colaboración entre los estudiantes de 4° año y 6° año de Programación no solo facilitó la resolución de complejos desafíos de hardware, sino que estimuló de manera excepcional la creatividad y el pensamiento científico dentro de la escuela técnica.</p>
+                        <span class="small-text mt-2 block">ESET — Quilmes, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: CTA FINAL -->
+        <section class="section-cta">
+            <div class="container center-text">
+                <h2 class="giant-title text-yellow mb-3">
+                    ¿Se puede correr<br>DOOM?<br>Desafío superado.
+                </h2>
+                <a href="#desarrollo" class="btn-primary">Explorar la Bitácora</a>
+            </div>
+        </section>
+
+        <!-- FOOTER PRINCIPAL -->
+        <footer id="footer" class="section-footer bg-maroon text-yellow">
+            <div class="container">
+                <h1 class="footer-logo">ESET</h1>
+                <p class="footer-intro font-bold mt-2">
+                    Proyecto Institucional articulado de 4° Año & 6° Año de Programación / Web.
+                </p>
+
+                <div class="footer-links-grid mt-4">
+                    <div class="footer-column">
+                        <a href="#resumen">Resumen</a>
+                        <a href="#desarrollo">Desarrollo y Bitácora</a>
+                        <a href="#conclusiones">Conclusiones</a>
+                    </div>
+                    <div class="footer-column font-mono">
+                        <a href="https://www.instagram.com/esetunq/?hl=es" target="_blank">↳ Instagram ESET</a>
+                        <a href="https://www.facebook.com/esetunq/?locale=es_LA" target="_blank">↳ Facebook Institucional</a>
+                        <a href="#">↳ Feria Distrital 2026</a>
+                    </div>
+                </div>
+
+                <div class="footer-legal mt-4">
+                    <span>Escuela de Educación Técnica — Quilmes, Buenos Aires, 2026</span>
+                    <span class="small-text block mt-1">© 2026 - Diseñado para Feria de Ciencias Distrital, Regional y Provincial.</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JAVASCRIPT DEL CARRUSEL Y NAVEGACIÓN MÓVIL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // LÓGICA DEL MENÚ CELULAR
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+
+            if(mobileBtn && navLinks) {
+                mobileBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Cerrar menú móvil al hacer click en un link
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // LÓGICA DEL CARRUSEL DE IMÁGENES
+            const track = document.getElementById('track');
+            const slides = Array.from(track.children);
+            const nextButton = document.getElementById('nextBtn');
+            const prevButton = document.getElementById('prevBtn');
+            
+            let currentIndex = 0;
+
+            const updateSlidePosition = () => {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            };
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0; // Vuelve al inicio
+                }
+                updateSlidePosition();
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = slides.length - 1; // Salta al final
+                }
+                updateSlidePosition();
+            });
+
+            // Recalcular el carrusel en caso de cambiar el tamaño de pantalla
+            window.addEventListener('resize', updateSlidePosition);
+        });
+    </script>
+</body>
+</html>
